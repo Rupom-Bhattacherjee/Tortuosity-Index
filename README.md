@@ -19,16 +19,42 @@ This file is also used in backend to create the app.
 [Visualization_functions](./Visualization_Functions.py) has the functions to get the directional drilling survey data by different means (e.g., by wellID, wellname, pad name, etc.)
 The [GUI tool](./GUI.py) calls these functions backend to get the data, calculate TI, and make plots. Some functions are deliberately kept filtered to prevent unwanted access to company database.
 
-## Analysis
-### The TI APP
+## App Overview
 The [Tortuosity App](./GUI.py) Pulls survey data from the database and calculates TI.
-![image](https://github.com/user-attachments/assets/0521ca42-3388-49c4-9d48-c9dd913e36ee)
+![Animation showing the features of the app](./image21.gif)
 
 It is equipped with:
--Calculating TI any section within the wellbore
--All types of tortuosity (Inclination/Azimuth/3D/Localized)
--Plotting tortuosity profile by well or pad name
--Plotting tortuosity against depth.
--Analyzing what type of tortuosity is more dominant
+- Calculating TI any section within the wellbore
+- All types of tortuosity (Inclination/Azimuth/3D/Localized)
+- Plotting tortuosity profile by well or pad name
+- Plotting tortuosity against depth.
+- Analyzing what type of tortuosity is more dominant.
 
-Comparing Vertical Tortuosity: Older vs. Newer Wells
+## APP Functions
+Comparing Vertical Tortuosity: Older vs. Newer Wells (An example of the analysis the app is equipped with)
+![TI of an older well](./image21.gif) ![TI of a newer well](./image22.gif)
+
+As can be seen the older well is much tortuous than the newer one (which was expected).
+
+Two wells from same pad has different level of lateral tortuosity. The following figure is showing lateral section tortuosity of two wells from same pad.
+![Lateral TI of two wells from same pad](./image23.gif)
+
+As mentioned earlier the app can perform advance analysis by showing tortuosity profile against measured depth of the wellbore. Following figures show how TI changes with depth for well A and well B. For well A, Azimuthal deviation is dominating the overall 3D tortuosity. However, for well B we see a more balanced effect of both inclination and azimuthal deviations on the overall tortuosity.
+![TI against MD for well A](./TI_MD_KONE_7H.png)  ![TI against MD for well B](./TI_MD_KONE_8H.png)
+
+## Production Performance vs. Lateral Tortuosity
+Because TI may affect the fluid flow through the tubing, in this section we wanted to see if the deviation in the lateral section of the wellbore has any impact on production performance from the wells. We analyzed data from several wells from several locations, normalized by the lateral length and the yearly production. However, we didn't see any correlation between wellbore tortuosity and production performance, as illustrated in the following figure.
+
+![Tortuosity and Production correlation](./Prod_TI_Corr.png)
+
+## Impact of TI on ALS Equipment Failure
+Then we went ahead and tried to see if the vertical section tortuosity has anything to do with artificial lift system failure. So we pulled out all the wells that had some sort of artificial lift (sucker rod specifically) failure due to reasons likely related to the quality of the borehole. As you can see in the following bar plot, the wells that had some artificial lift failure due to sucker rod coupling fatigue fracture and hole in tubing had on average significantly higher TI than others.
+
+![Tortuosity and ALS Equipment Failure correlation](./TI_Equip_Failure.png)
+
+## Summary
+In this work I developed a set of codes for calculating TI from directional survey data. I also developed an executable GUI file that will let you calculate different types of TI and plot it against different parameters. We have also explored what correlation lateral section deviation has production performance and what correlation vertical section deviation has with ALS failure. 
+
+
+
+
