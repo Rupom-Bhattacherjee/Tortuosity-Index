@@ -11,13 +11,24 @@ Besides, for the first time this study explored the effect of wellbore deviation
 ## Code Descriptions
 
 ### Tourtuosity_Functions
-![Tortousity Functions](./Tortuosity_Functions.py) file has all the functions required to calculate TI. 
+[Tortousity Functions](./Tortuosity_Functions.py) file has all the functions required to calculate TI. 
 Just save this file and use it as a library. Import any functions from here to get desired result. 
 This file is also used in backend to create the app. 
 
 ### Visualization_functions
-![Visualization_functions](./Visualization_Functions.py) has the functions to get the directional drilling survey data by different means (e.g., by wellID, wellname, pad name, etc.)
-The ![GUI tool](./GUI.py) calls these functions backend to get the data, calculate TI, and make plots. Some functions are deliberately kept filtered to prevent unwanted access to company database.
+[Visualization_functions](./Visualization_Functions.py) has the functions to get the directional drilling survey data by different means (e.g., by wellID, wellname, pad name, etc.)
+The [GUI tool](./GUI.py) calls these functions backend to get the data, calculate TI, and make plots. Some functions are deliberately kept filtered to prevent unwanted access to company database.
 
 ## Analysis
+### The TI APP
+The [Tortuosity App](./GUI.py) Pulls survey data from the database and calculates TI.
+![image](https://github.com/user-attachments/assets/0521ca42-3388-49c4-9d48-c9dd913e36ee)
 
+It is equipped with:
+-Calculating TI any section within the wellbore
+-All types of tortuosity (Inclination/Azimuth/3D/Localized)
+-Plotting tortuosity profile by well or pad name
+-Plotting tortuosity against depth.
+-Analyzing what type of tortuosity is more dominant
+
+Comparing Vertical Tortuosity: Older vs. Newer Wells
