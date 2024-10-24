@@ -85,7 +85,7 @@ As mentioned earlier the app can perform advance analysis by showing tortuosity 
 Because TI may affect the fluid flow through the tubing, in this section we wanted to see if the deviation in the lateral section of the wellbore has any impact on production performance from the wells. We analyzed data from several wells from several locations, normalized by the lateral length and the yearly production. However, we didn't see any correlation between wellbore tortuosity and production performance, as illustrated in the following figure.
 
 <p align="center">
-  <img src="./Prod_TI_Corr.png" alt="Alt text" width="300">
+  <img src="./V2_Prod_TI_corr.png" alt="Alt text" width="300">
 </p>
 <p align="center">
   Tortuosity and Production correlation.
